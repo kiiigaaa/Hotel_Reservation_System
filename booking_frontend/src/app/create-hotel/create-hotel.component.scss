@@ -1,0 +1,35 @@
+body{
+  background-image: url('https://www.jetwinghotels.com/wp-content/uploads/2017/12/Location-banner-desktop-large.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.centered-container {
+    width: 500px;
+    margin: 0 auto;
+    
+    padding: 25px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
+
+    
+  }
+
+  .form-group{
+    margin: 10px;
+  }
+
+  .btn-primary{
+    margin-left: 150px;
+  }
+
+  .header{
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center;
+    
+}

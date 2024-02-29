@@ -1,0 +1,41 @@
+/* confirm-dialog.component.scss */
+/* Add your custom styling here */
+
+/* Style the dialog title */
+mat-dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the dialog content */
+  mat-dialog-content {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Style the dialog actions */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Style the Cancel button */
+  button[mat-button] {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* Style the Confirm button */
+  button[mat-button][color="warn"] {
+    background-color: #e53935;
+    color: white;
+  }
+  

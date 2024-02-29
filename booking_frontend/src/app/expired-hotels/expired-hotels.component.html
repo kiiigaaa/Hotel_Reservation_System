@@ -1,0 +1,26 @@
+<body>
+<div class="expired-hotels-container">
+  <h2>Contract Expired Hotels</h2>
+  <div class="row">
+    <div *ngFor="let hotel of expiredHotels" class="col-md-4 mb-4">
+      <div class="card hotel-card">
+        <div class="card-body">
+          <h5 class="card-title">{{ hotel.hotelName }}</h5>
+          <!-- Add any additional hotel information you want to display -->
+          <button (click)="goToUpdateContract(hotel.hotelId)" class="btn btn-primary">Update Contract</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <ul class="pagination">
+    <li class="page-item" *ngFor="let page of pages" [class.active]="page === currentPage">
+      <a class="page-link" (click)="setCurrentPage(page)">{{ page }}</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+

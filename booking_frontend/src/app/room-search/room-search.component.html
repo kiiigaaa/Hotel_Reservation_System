@@ -1,0 +1,71 @@
+
+<body>
+  <div class="background-image">
+<div class="search-container">
+  <div class="header"><h1 class="mb-4 header">Search Rooms/Hotels</h1></div>
+  <form (ngSubmit)="searchRooms()" #searchForm="ngForm" class="search-form">
+    <div class="card search-card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3 form-group">
+            <label for="checkInDate">Check-in Date:</label>
+            <input type="date" id="checkInDate" name="checkInDate" [(ngModel)]="searchCriteria.checkInDate" required class="form-control">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="numberOfNights">Number of Nights:</label>
+            <input type="number" id="numberOfNights" name="numberOfNights" [(ngModel)]="searchCriteria.numberOfNights" required class="form-control">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="hotelName">Hotel Name:</label>
+            <input type="text" id="hotelName" name="hotelName" [(ngModel)]="searchCriteria.hotelName" class="form-control">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="numberOfRooms">Number of rooms:</label>
+            <input type="number" id="numberOfRooms" name="numberOfRooms" [(ngModel)]="searchCriteria.numberOfRooms" class="form-control">
+          </div>
+        
+          <div class="col-md-3 form-group">
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" [(ngModel)]="searchCriteria.adults" class="form-control">
+          </div>
+          <div class="col-md-3 form-group">
+            <button type="submit" class="btn btn-primary search-btn">Search</button>
+          
+       </div>
+      </div>
+    </div>
+    </div>
+  </form>
+  </div>
+
+
+</div>
+<div class="room-results">
+  <div *ngIf="searchResults.length > 0" class="search-results">
+    <h3 class="mb-3">Search Results:</h3>
+    <div class="row">
+      <div *ngFor="let room of getDisplayedResults()" class="col-md-4 mb-4">
+        <div class="card room-card">
+          <div class="card-body">
+            <h4 class="card-title">{{ room.roomTypeName }}</h4>
+            <p class="card-text">Available Rooms: {{ room.availableRooms }}</p>
+            <p class="card-text">Price: {{ room.price }}</p>
+            <p class="card-text">Max Adults: {{ room.maxAdults }}</p>
+            <button (click)="redirectToBooking(room)" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <ul class="pagination">
+    <li class="page-item" *ngFor="let page of getPaginationRange()" [class.active]="page === currentPage">
+      <a class="page-link" (click)="setCurrentPage(page)">{{ page }}</a>
+    </li>
+  </ul>
+</div>
+
+
+</body>

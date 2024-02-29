@@ -1,0 +1,115 @@
+
+.search-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.form-group{
+    width: 200px;
+}
+
+.search-btn{
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+}
+
+.search-card{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 60%;
+    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    color: azure;
+}
+
+.room-card{
+    background-color: rgb(248, 244, 238);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity:70%;
+    border-radius: 15px;
+    
+}
+
+body {
+   
+    
+    
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Adjust the font size as needed */
+    padding-top: 40px; /* Adjust the padding as needed */
+    font-size: 60px;
+    color: rgb(50, 86, 102);
+}
+
+  .background-image {
+    background-image: url('https://i2.wp.com/kenwoodtravel.co.uk/blog/wp-content/uploads/Six-Senses-Kaplankaya-Turkey.jpg?resize=1024%2C535&ssl=1'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 400px;
+  }
+
+  .room-results{
+    padding: 10px;
+    background-color: rgb(206, 221, 226);
+  }
+
+
+  /* Pagination styles */
+.pagination {
+  
+  display: flex;
+  justify-content: center;
+  background-color: rgb(206, 221, 226);
+}
+
+.page-item {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.page-link {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #f5f5f5;
+  color: #555;
+  border-color: #ccc;
+  cursor: pointer;
+}
+
+.page-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  cursor: default;
+}
+
+
+
+ 
+  
+
+
+  
+
+
+
+

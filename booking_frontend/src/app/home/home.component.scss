@@ -1,0 +1,51 @@
+.card-container {
+    display: flex;
+   margin-left: 15px;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+    background-color: #f8f4ee;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    margin-top: 150px;
+    transition: transform 0.2s ease-in-out;
+    opacity: 80%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+body{
+    background-image: url('https://media.architecturaldigest.com/photos/5a8321a4361bde6c53d18e5b/16:9/w_1920,c_limit/Ponta%20dos%20Ganchos%20Esmeralda_Bungalow.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

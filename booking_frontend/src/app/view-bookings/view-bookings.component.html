@@ -1,0 +1,40 @@
+<body>
+<div class="header"><h1>Bookings</h1></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let booking of bookings">
+      <div class="card booking-card mb-4">
+        <div class="card-header">
+          <h5 class="card-title"><strong>Booking Details</strong></h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><strong>Booking ID:</strong> {{ booking.bookingId }}</p>
+          <p class="card-text"><strong>Hotel Name:</strong> {{ booking.hotelName }}</p>
+          <p class="card-text"><strong>Room Type Name:</strong> {{ booking.roomTypeName }}</p>
+          <p class="card-text"><strong>Customer Name:</strong> {{ booking.customerName }}</p>
+          <p class="card-text"><strong>No. of Rooms:</strong> {{ booking.noOfRooms }}</p>
+          <p class="card-text"><strong>Check-in Date:</strong> {{ booking.checkingDate | date }}</p>
+          <p class="card-text"><strong>Check-out Date:</strong> {{ booking.checkoutDate | date }}</p>
+          <p class="card-text"><strong>Contact No.:</strong> {{ booking.contactNo }}</p>
+        </div>
+        <div class="card-footer">
+        <div class="button-container">
+          <button class="btn btn-danger" (click)="confirmCancellation(booking.bookingId)">Cancel Booking</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <ul class="pagination">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <a class="page-link" (click)="onPageChange(currentPage - 1)">Previous</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="onPageChange(currentPage + 1)">Next</a>
+    </li>
+  </ul>
+</div>
+</body>

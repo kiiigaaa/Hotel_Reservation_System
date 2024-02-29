@@ -1,0 +1,69 @@
+<!-- add-room-types.component.html -->
+<body>
+<div class="add-room-types-container">
+  <h2>Add Room Types</h2>
+  <form [formGroup]="roomForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="roomTypeName">Room Type:</label>
+      <input
+        type="text"
+        id="roomTypeName"
+        formControlName="roomTypeName"
+        class="form-control"
+      />
+      <div
+        *ngIf="roomForm.get('roomType')?.invalid && roomForm.get('roomType')?.touched"
+        class="error-message"
+      >
+        Room Type is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="maxAdults">Max Adults:</label>
+      <input
+        type="number"
+        id="maxAdults"
+        formControlName="maxAdults"
+        class="form-control"
+      />
+      <div
+        *ngIf="roomForm.get('maxAdults')?.invalid && roomForm.get('maxAdults')?.touched"
+        class="error-message"
+      >
+        Max Adults is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        id="price"
+        formControlName="price"
+        class="form-control"
+      />
+      <div
+        *ngIf="roomForm.get('price')?.invalid && roomForm.get('price')?.touched"
+        class="error-message"
+      >
+        Price is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="noOfRooms">Number of Rooms:</label>
+      <input
+        type="number"
+        id="noOfRooms"
+        formControlName="noOfRooms"
+        class="form-control"
+      />
+      <div
+        *ngIf="roomForm.get('noOfRooms')?.invalid && roomForm.get('noOfRooms')?.touched"
+        class="error-message"
+      >
+        Number of Rooms is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="roomForm.invalid">Create Room</button>
+  </form>
+</div>
+</body>

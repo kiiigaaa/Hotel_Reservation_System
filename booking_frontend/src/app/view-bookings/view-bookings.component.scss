@@ -1,0 +1,74 @@
+
+.booking-card {
+    
+    justify-content: center;
+    
+    
+  }
+  
+
+  /* In your component's CSS file */
+.btn-danger {
+    margin: 5px; /* Adjust the value as needed */
+  }
+
+.container{
+    padding: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    margin-top: 10px; /* Adjust the value as needed */
+  }
+
+.card-header{
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    
+}
+.header{
+    display: flex;
+    font-size: 30px;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 10px;
+  width: 100px;
+  align-items: center;
+}
+
+.page-link {
+  text-decoration: none;
+  color: black; /* Blue color for links */
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.page-link:hover {
+  color: red;
+}
+
+.disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+//
+
+
+
+  
